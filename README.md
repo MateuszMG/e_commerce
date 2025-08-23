@@ -1,4 +1,10 @@
-# medium_high_traffic_e_commerce
+# E-commerce Monorepo
 
-git push -u origin main
-dev
+Monorepo skeleton for a microservice-based e-commerce platform built with Next.js and NestJS.
+
+## Structure
+
+- `apps/` – application services (frontend and backend)
+- `packages/` – shared TypeScript packages
+- `tools/` – helper scripts
+- `infra/` – infrastructure configuration
