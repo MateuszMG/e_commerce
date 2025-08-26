@@ -15,7 +15,7 @@ pnpm install
 ```
 
 ## Development
-Start the database and all services:
+Start the database, Kafka, and all services:
 
 ```bash
 docker compose up -d
