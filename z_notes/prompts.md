@@ -3,8 +3,36 @@
 <!--  -->
 <!--  -->
 <!--  -->
+
+Write a minimal Dockerfile per service.
+Add a root docker-compose.yml for local dev (Postgres, services).
+
 <!--  -->
+
+use Nest Swagger, yup,
+Implement the first service (JS/TS)
+Example: users service with health + one endpoint.
+Use Prisma for Postgres (or Drizzle). One DB per service to enforce loose coupling.
+
 <!--  -->
+
+Monorepo setup
+
+Create a repo (use Turborepo ).
+
+Example folder layout:
+
+/infra/ # IaC scripts, env templates
+/apps/frontend # Next.js (SWA)
+/apps/gateway # custom gateway/BFF
+/services/users # NestJS service
+/services/orders # NestJS service
+/services/payments # NestJS service
+/services/notifications # NestJS service
+/packages/shared # DTOs, schema validators, utilities (no runtime side‑effects)
+
+Configure TS project references and a base tsconfig.json. Add ESLint + Prettier.
+
 <!--  -->
 
 craete setup of ecommerce app using Nest and Next. It should be monorepo, with services:
