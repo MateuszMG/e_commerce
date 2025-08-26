@@ -7,6 +7,15 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src"],
-  "references": [{ "path": "../../packages/shared" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "../../packages/shared"
+    },
+    {
+      "path": "../../packages/event-bus"
+    }
+  ]
 }

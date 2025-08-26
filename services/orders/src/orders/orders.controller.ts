@@ -11,8 +11,7 @@ export class OrdersController {
 
   @Post()
   @ApiCreatedResponse({ description: 'Order has been created' })
-  create(@Body(new YupValidationPipe(createOrderSchema)) body: CreateOrderDto) {
+  async create(@Body(new YupValidationPipe(createOrderSchema)) body: CreateOrderDto) {
     return this.ordersService.create(body);
   }
 }
-
