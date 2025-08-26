@@ -3,6 +3,19 @@
 <!--  -->
 <!--  -->
 <!--  -->
+<!--  -->
+<!--  -->
+
+Implemnet Kafka + even-driven-architecture
+
+<!--  -->
+
+create 'payments' service in 'e_commerce\services\payments' based on 'users' service in 'e_commerce\services\users'.
+
+Create dto, 1 endpoint + healthCheck. 
+Use Nest Swagger, yup,
+
+<!--  -->
 
 Write a minimal Dockerfile per service.
 Add a root docker-compose.yml for local dev (Postgres, services).
