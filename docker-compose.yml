@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: e_commerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  users:
+    build: ./services/users
+    ports:
+      - "3001:3000"
+    depends_on:
+      - postgres
+  orders:
+    build: ./services/orders
+    ports:
+      - "3002:3000"
+    depends_on:
+      - postgres
+  payments:
+    build: ./services/payments
+    ports:
+      - "3003:3000"
+    depends_on:
+      - postgres
+  notifications:
+    build: ./services/notifications
+    ports:
+      - "3004:3000"
+    depends_on:
+      - postgres
+volumes:
+  pgdata:
